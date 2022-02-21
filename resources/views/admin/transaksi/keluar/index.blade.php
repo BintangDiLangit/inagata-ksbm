@@ -28,10 +28,12 @@
                             <select class="form-select" name="user" id="user">
                                 <option selected="true" disabled="true">Pilih User</option>
                                 @foreach ($users as $user)
-                                    <option value="{{ $user->id }}">{{ $user->nama_lengkap }}</option>
+                                    <option value="{{ $user->id }}">{{ $user->nama_user }}</option>
                                 @endforeach
                             </select>
-                            @error('user') <span class="text-danger">{{ $message }}</span>@enderror
+                            @error('user')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="produk">Produk</label>
@@ -42,7 +44,9 @@
                                     <option value="{{ $produk->id_produk }}">{{ $produk->nama_produk }}</option>
                                 @endforeach
                             </select>
-                            @error('produk') <span class="text-danger">{{ $message }}</span>@enderror
+                            @error('produk')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                         <div class="mb-3" id="input-stok">
                             <label class="form-label" for="stok">Stok</label>
@@ -53,7 +57,9 @@
                         <div class="mb-3">
                             <label class="form-label" for="jumlah">Jumlah</label>
                             <input class="form-control" type="number" placeholder="Input Jumlah" name="jumlah">
-                            @error('jumlah') <span class="text-danger">{{ $message }}</span>@enderror
+                            @error('jumlah')
+                                <span class="text-danger">{{ $message }}</span>
+                            @enderror
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -149,7 +155,7 @@
                         data: 'status'
                     },
                     {
-                        data: 'user.nama_lengkap'
+                        data: 'user.nama_user'
                     },
                     {
                         data: 'produk.nama_produk'

@@ -27,13 +27,11 @@ class UserFactory extends Factory
 		return [
 			'email' => $this->faker->unique()->safeEmail(),
 			'email_verified_at' => now(),
-			'nama_lengkap' => $this->faker->name(),
+			'nama_user' => $this->faker->name(),
 			'username' => $this->faker->userName(),
 			'password' => bcrypt('11111111'), // password
-			'konfirm_password' => bcrypt('11111111'), // password
-			'no_telp' => $this->faker->phoneNumber(),
+			'nomor_hp' => $this->faker->phoneNumber(),
 			'roles' => 'ADMIN',
-			'jenis' => 'ANGGOTA',
 			'remember_token' => Str::random(10),
 		];
 	}

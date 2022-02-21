@@ -68,7 +68,12 @@
 </head>
 
 <body>
-    <div class="flex-center position-ref full-height">
+    <div class="flex-center position-ref" style="margin-top: 5cm">
+        <h1>Shoe Ville - Shoes Store</h1>
+    </div>
+    <hr style="margin-bottom: 3em">
+    <div class="flex-center position-ref">
+
         @if (Route::has('login'))
             <div class="links">
                 @auth
