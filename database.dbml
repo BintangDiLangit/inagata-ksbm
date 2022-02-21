@@ -1,0 +1,46 @@
+Project KSBM {
+  database_type: 'MySQL'
+  Note: '''
+    # KSBM Database
+    **markdown content here**
+  '''
+}
+Table users as U {
+  id_users int [pk, increment]
+  email varchar
+  username varchar
+  password varchar
+  nomor_hp varchar
+  roles varchar
+  created_at timestamp
+  updated_at timestamp
+
+  note: "table 'users' contains user information"
+}
+
+Table alamats as A {
+	id_alamats int [pk, increment]
+	alamat medium
+
+}
+
+Table transaksis as T {
+	id_transaksis int [pk, increment]
+	pembayaran varchar
+	harga_total float
+	biaya_pengiriman float
+	status varchar
+	created_at timestamp
+	updated_at timestamp
+}
+
+Table detail_transaksis as DT{
+	id_detail_transaksis int [pk, increment]
+	komunitas int
+	created_at timestamp
+	updated_at timestamp
+}
+
+Table wishlist as W{
+	id_wishlist int [pk, increment]
+}
